@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MiLe 2026 — Autonome Mikromobilität und smarte Logistik auf der letzten Meile</title>
+<meta name="description" content="2. Workshop zu autonomer Mikromobilität und smarter Logistik auf der letzten Meile. 5. November 2026, Deutsches Technikmuseum in Berlin. Call for Papers.">
+<style>
+  :root{
+    --blue:#0066b2;
+    --dark:#003e6e;
+    --ink:#1c2226;
+    --muted:#5d6b78;
+    --line:#dde3e8;
+    --bg:#ffffff;
+    --bg-soft:#f2f4f6;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Lato",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  /* ---------- Kopf ---------- */
+  header{
+    background:var(--dark);
+    color:#fff;
+    padding:56px 0 48px;
+  }
+  header .eyebrow{
+    font-size:.95rem;letter-spacing:.02em;opacity:.85;margin:0 0 18px;
+  }
+  header .eyebrow strong{font-weight:700}
+  header h1{
+    margin:0 0 6px;
+    font-size:clamp(1.6rem,4.2vw,2.5rem);
+    line-height:1.18;
+    font-weight:700;
+  }
+  header .series{
+    font-size:clamp(1.15rem,2.6vw,1.5rem);
+    font-weight:700;
+    margin:0 0 14px;
+  }
+  header .meta{
+    font-size:1rem;opacity:.9;margin:18px 0 0;
+    display:flex;flex-wrap:wrap;gap:6px 18px;
+  }
+  header .meta span{white-space:nowrap}
+
+  /* ---------- Abschnitte ---------- */
+  section{padding:44px 0}
+  section + section{border-top:1px solid var(--line)}
+  h2{
+    font-size:1.35rem;color:var(--dark);margin:0 0 4px;font-weight:700;
+  }
+  h2 + .rule{height:2px;background:var(--blue);margin:0 0 20px;width:100%}
+  h3{font-size:1.02rem;color:var(--dark);margin:22px 0 4px;font-weight:700}
+  p{margin:0 0 14px}
+  .lead{font-size:1.06rem}
+  a{color:var(--blue)}
+  a:hover{text-decoration:none}
+
+  .note{
+    background:var(--bg-soft);
+    padding:16px 18px;
+    margin:20px 0 0;
+    font-size:.95rem;
+  }
+
+  /* ---------- Download-Karten ---------- */
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:26px;
+    margin-top:6px;
+  }
+  .card{
+    display:block;
+    border:1px solid var(--line);
+    text-decoration:none;
+    color:inherit;
+    background:#fff;
+    transition:border-color .15s ease, box-shadow .15s ease, transform .15s ease;
+  }
+  .card:hover,.card:focus-visible{
+    border-color:var(--blue);
+    box-shadow:0 6px 22px rgba(0,62,110,.13);
+    transform:translateY(-2px);
+    outline:none;
+  }
+  .card .thumb{
+    background:var(--bg-soft);
+    border-bottom:1px solid var(--line);
+    padding:20px 20px 0;
+  }
+  .card .thumb img{
+    display:block;width:100%;height:auto;
+    box-shadow:0 2px 10px rgba(0,0,0,.14);
+  }
+  .card .body{padding:16px 20px 20px}
+  .card .lang{
+    font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 4px;
+  }
+  .card .title{font-size:1.08rem;font-weight:700;color:var(--dark);margin:0 0 4px}
+  .card .sub{font-size:.9rem;color:var(--muted);margin:0 0 14px}
+  .card .btn{
+    display:inline-block;
+    background:var(--blue);color:#fff;
+    padding:9px 16px;
+    font-size:.92rem;font-weight:700;
+  }
+  .card:hover .btn{background:var(--dark)}
+
+  /* ---------- Termine ---------- */
+  table{border-collapse:collapse;width:100%;margin:4px 0 0}
+  th,td{text-align:left;padding:9px 4px;border-bottom:1px solid var(--line);font-size:.97rem}
+  td:last-child{text-align:right;white-space:nowrap;color:var(--muted)}
+  tr:first-child td{border-top:1px solid var(--line)}
+
+  /* ---------- Zweispaltig ---------- */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  .two .col p{margin:0 0 8px}
+  .small{font-size:.94rem}
+  .muted{color:var(--muted)}
+
+  ul{margin:0 0 14px;padding-left:20px}
+  li{margin-bottom:5px}
+
+  /* ---------- Logoleiste ---------- */
+  .logos{
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
+    gap:40px;padding:12px 0 4px;
+  }
+  .logos img{display:block;height:42px;width:auto}
+  .logos img.mfund{height:46px}
+  .logos img.hs{height:34px}
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:26px 0 40px;
+    font-size:.88rem;color:var(--muted);
+  }
+  footer a{color:var(--muted)}
+
+  /* ---------- Mobil ---------- */
+  @media (max-width:760px){
+    .cards{grid-template-columns:1fr;gap:20px}
+    .two{grid-template-columns:1fr;gap:22px}
+    header{padding:40px 0 34px}
+    section{padding:34px 0}
+    .logos{gap:28px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Call for Papers &nbsp;·&nbsp; <strong>MiLe 2026</strong></p>
+    <p class="series">2. Workshop</p>
+    <h1>Autonome Mikromobilität und smarte<br>Logistik auf der letzten Meile</h1>
+    <p class="meta">
+      <span>Donnerstag, 5. November 2026 (voraussichtlich)</span>
+      <span>Deutsches Technikmuseum in Berlin</span>
+      <span>eintägig</span>
+    </p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Über den Workshop</h2><div class="rule"></div>
+    <p class="lead">
+      Die rasante Entwicklung autonomer Systeme verändert unsere Städte und unseren Alltag
+      grundlegend. Abseits der automotiven Anwendungen entstehen auf der letzten Meile neue
+      Lösungen: autonome Liefer- und Serviceroboter auf Fuß- und Radwegen, vernetzte
+      Kleinstfahrzeuge und datenbasierte Logistikkonzepte im urbanen Raum. Gemeinsam ist ihnen,
+      dass sie sich im öffentlichen Verkehrsraum bewähren müssen — technisch, rechtlich und
+      gesellschaftlich.
+    </p>
+    <p>
+      Der Workshop dient als Plattform, um neueste Forschungsergebnisse, Entwicklungen und
+      Anwendungen in diesem Feld zu präsentieren und wissenschaftlich zu diskutieren. Er richtet
+      sich an Wissenschaftler:innen, Ingenieur:innen, Studierende sowie Vertreter:innen aus
+      entsprechenden Forschungsprojekten und bezieht auch Hersteller und Betreiber ein.
+      Willkommen sind zudem Expert:innen der öffentlichen Verwaltung, die sich mit der
+      Regulierung automatisierter Systeme im öffentlichen Verkehrsraum beschäftigen.
+    </p>
+    <div class="note">
+      Der Workshop wird gemeinsam mit der <strong>mFUND-Begleitforschung</strong> durchgeführt.
+      Die Veranstaltung richtet sich entsprechend explizit an Forschende aus thematisch
+      einschlägigen mFUND-Projekten.
+    </div>
+  </div>
+</section>
+
+<section id="cfp">
+  <div class="wrap">
+    <h2>Call for Papers</h2><div class="rule"></div>
+    <p>
+      Der vollständige Call for Papers steht in deutscher und englischer Sprache zum Download
+      bereit.
+    </p>
+
+    <div class="cards">
+      <a class="card" href="cfp-de.pdf" download>
+        <div class="thumb"><img src="preview-de.jpg" alt="Titelseite des deutschsprachigen Call for Papers"></div>
+        <div class="body">
+          <p class="lang">Deutsch</p>
+          <p class="title">Call for Papers</p>
+          <p class="sub">PDF · 3 Seiten · ca. 240 kB</p>
+          <span class="btn">PDF herunterladen</span>
+        </div>
+      </a>
+
+      <a class="card" href="cfp-en.pdf" download>
+        <div class="thumb"><img src="preview-en.jpg" alt="Title page of the English call for papers"></div>
+        <div class="body">
+          <p class="lang">English</p>
+          <p class="title">Call for Papers</p>
+          <p class="sub">PDF · 3 pages · approx. 240 kB</p>
+          <span class="btn">Download PDF</span>
+        </div>
+      </a>
+    </div>
+
+    <h3>Einreichungsformate</h3>
+    <ul>
+      <li><strong>Full Paper (Vortrag)</strong> — max. 6 Seiten, Light Peer Review (single-blind).
+        Angenommene Beiträge werden als Vortrag präsentiert und im Workshopband veröffentlicht.
+        <a href="https://github.com/SebastianZug/Simple_AcademicPaper_Template">LaTeX-Vorlage</a></li>
+      <li><strong>Poster / Extended Abstract</strong> — 1–2 Seiten, redaktionelle Sichtung,
+        Präsentation im Showroom.</li>
+    </ul>
+    <p>
+      Einreichung und Begutachtung erfolgen über
+      <a href="https://easychair.org/conferences/?conf=mile2026">EasyChair</a>.
+    </p>
+    <div class="note">
+      Projekte aus dem mFUND, die keinen Beitrag einreichen möchten, können sich unabhängig
+      davon an der Session <strong>Projektvorstellungen</strong> beteiligen. Ansprechpartner
+      hierfür ist die mFUND-Begleitforschung.
+    </div>
+  </div>
+</section>
+
+<section id="termine">
+  <div class="wrap">
+    <h2>Wichtige Termine</h2><div class="rule"></div>
+    <table>
+      <tr><td>Einreichfrist Full Paper &amp; Poster/Abstract</td><td>11.09.2026</td></tr>
+      <tr><td>Anmeldung Projektvorstellungen (mFUND)</td><td>30.09.2026</td></tr>
+      <tr><td>Benachrichtigung der Autor:innen</td><td>11.10.2026</td></tr>
+      <tr><td>Workshop</td><td>05.11.2026 (voraussichtlich)</td></tr>
+      <tr><td>Camera-Ready-Fassung</td><td>14.12.2026</td></tr>
+    </table>
+    <p class="small muted" style="margin-top:14px">
+      Die Camera-Ready-Fassung wird bewusst erst nach dem Workshop eingereicht: Autor:innen
+      erhalten so ausreichend Zeit für die Überarbeitung und können Anregungen aus der
+      Diskussion vor Ort noch einarbeiten.
+    </p>
+  </div>
+</section>
+
+<section id="ort">
+  <div class="wrap">
+    <h2>Veranstaltungsort</h2><div class="rule"></div>
+    <div class="two">
+      <div class="col">
+        <h3 style="margin-top:0">Deutsches Technikmuseum in Berlin</h3>
+        <p class="small">
+          Trebbiner Straße 9<br>
+          10963 Berlin
+        </p>
+        <p class="small">
+          <a href="https://technikmuseum.berlin">technikmuseum.berlin</a>
+        </p>
+      </div>
+      <div class="col">
+        <h3 style="margin-top:0">Hinweise</h3>
+        <p class="small"><strong>Sprachen:</strong> Beiträge können in deutscher oder englischer
+          Sprache eingereicht werden. Englisch ist — insbesondere bei Full Papers — ausdrücklich
+          erwünscht, aber nicht verpflichtend.</p>
+        <p class="small"><strong>Veröffentlichung:</strong> Der Workshopband erscheint
+          referenzierbar über das Portal der Universitätsbibliothek Freiberg.</p>
+        <p class="small"><strong>Teilnahmegebühren:</strong> Es werden keine Teilnahmegebühren
+          fällig.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="wrap">
+    <h2>Organisation und Kontakt</h2><div class="rule"></div>
+    <div class="two">
+      <div class="col">
+        <h3 style="margin-top:0">Prof. Dr. Sebastian Zug</h3>
+        <p class="small">TU Bergakademie Freiberg, Fakultät für Mathematik und Informatik,
+          Lehrstuhl Softwaretechnologie und Robotik</p>
+        <p class="small">
+          +49 3731 39 2568<br>
+          <a href="mailto:sebastian.zug@informatik.tu-freiberg.de">sebastian.zug@informatik.tu-freiberg.de</a>
+        </p>
+      </div>
+      <div class="col">
+        <h3 style="margin-top:0">Felix Ludwig Schneider</h3>
+        <p class="small">mFUND-Begleitforschung im Auftrag des Bundesministeriums für Verkehr
+          (BMV), TÜV Rheinland Forschungs- und Innovationsmanagement GmbH, Am Grauen Stein,
+          51105 Köln</p>
+        <p class="small">
+          +49 221 806 2262<br>
+          <a href="mailto:Felix.Ludwig.Schneider@tuv.com">Felix.Ludwig.Schneider@tuv.com</a><br>
+          <a href="https://www.tuv.com/TRFI">www.tuv.com/TRFI</a>
+        </p>
+      </div>
+    </div>
+
+    <h3>Wissenschaftliche Leitung</h3>
+    <ul class="small">
+      <li><strong>Prof. Dr.-Ing. Frank Schrödel</strong> — Hochschule Schmalkalden,
+        Fakultät Maschinenbau ·
+        <a href="mailto:f.schroedel@hs-sm.de">f.schroedel@hs-sm.de</a></li>
+      <li><strong>Prof. Dr. Henner Gärtner</strong> — HAW Hamburg, Institut für Produkt- und
+        Produktionsmanagement ·
+        <a href="mailto:henner.gaertner@haw-hamburg.de">henner.gaertner@haw-hamburg.de</a></li>
+      <li><strong>Dr. Georg Jäger</strong> — TU Bergakademie Freiberg, Professur für
+        Softwaretechnologie und Robotik ·
+        <a href="mailto:georg.jaeger@tu-freiberg.de">georg.jaeger@tu-freiberg.de</a></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="small muted" style="text-align:center;margin-bottom:16px">Veranstaltet von</p>
+    <div class="logos">
+      <img src="logos/tubaf.png" alt="TU Bergakademie Freiberg">
+      <img src="logos/haw.png" alt="HAW Hamburg">
+      <img src="logos/hs-schmalkalden.png" class="hs" alt="Hochschule Schmalkalden">
+      <img src="logos/mfund.png" class="mfund" alt="mFUND">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    MiLe 2026 · 2. Workshop Autonome Mikromobilität und smarte Logistik auf der letzten Meile ·
+    <a href="#cfp">Call for Papers</a> ·
+    <a href="https://easychair.org/conferences/?conf=mile2026">Einreichung</a>
+  </div>
+</footer>
+
+</body>
+</html>

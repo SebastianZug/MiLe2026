@@ -1,7 +1,7 @@
 # MiLe 2026
 
 Website zum **2. Workshop „Autonome Mikromobilität und smarte Logistik auf der letzten Meile"** —
-5. November 2026 (voraussichtlich), Deutsches Technikmuseum in Berlin.
+5. November 2026, Deutsches Technikmuseum in Berlin.
 
 Der Workshop wird gemeinsam mit der mFUND-Begleitforschung durchgeführt.
 
